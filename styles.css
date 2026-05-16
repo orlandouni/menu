@@ -1,0 +1,292 @@
+/* =====================================================
+   styles.css — La Mesa Weekly Menu Site
+   Mobile-first, clean, modern.
+   ===================================================== */
+
+/* ── CSS Variables (edit here to retheme the whole site) ── */
+:root {
+  --brand:        #c8622a;       /* ✏️ REPLACE: your brand/accent color */
+  --brand-dark:   #a44e1f;
+  --bg:           #faf8f5;       /* warm off-white page background */
+  --surface:      #ffffff;       /* card background */
+  --text-primary: #1a1611;
+  --text-muted:   #7a7166;
+  --border:       #ede8e1;
+  --shadow-sm:    0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:    0 6px 24px rgba(0,0,0,.09);
+  --radius-sm:    10px;
+  --radius-md:    18px;
+  --radius-lg:    24px;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; }
+a  { text-decoration: none; color: inherit; }
+
+/* ── Base ── */
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Page wrapper — centers content on large screens ── */
+.page-wrapper {
+  max-width: 560px;          /* feels native on mobile; readable on desktop */
+  margin: 0 auto;
+  padding: 0 0 40px;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+.site-header {
+  text-align: center;
+  padding: 48px 24px 32px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Logo */
+.logo-wrap {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  border: 3px solid var(--border);
+}
+
+/* Restaurant name */
+.restaurant-name {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+/* Tagline */
+.tagline {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+/* =====================================================
+   MENU SECTION
+   ===================================================== */
+.menu-section {
+  padding: 28px 16px 8px;
+}
+
+/* "This Week's Menu" pill label */
+.section-label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.pill {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+
+/* Menu image card */
+.menu-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.menu-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Ensures tall menus don't overflow — scroll instead */
+  max-height: 80vh;
+  object-fit: contain;
+  background: #f0ece6;   /* neutral placeholder while image loads */
+}
+
+/* =====================================================
+   WHATSAPP CONTACT SECTION
+   ===================================================== */
+.contact-section {
+  padding: 28px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, .35);
+  width: 100%;
+  max-width: 340px;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.whatsapp-btn:hover,
+.whatsapp-btn:focus-visible {
+  background: #1ebe5d;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, .45);
+  transform: translateY(-1px);
+}
+
+.whatsapp-btn:active {
+  transform: translateY(0);
+}
+
+.wa-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.phone-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   INFO SECTION — Address + Hours
+   ===================================================== */
+.info-section {
+  padding: 16px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background: #f4f0ea;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
+}
+
+.info-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.info-value {
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.site-footer {
+  text-align: center;
+  padding: 32px 16px 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* =====================================================
+   RESPONSIVE — Tablet & Desktop tweaks
+   ===================================================== */
+@media (min-width: 600px) {
+  .site-header {
+    padding: 56px 40px 36px;
+  }
+
+  .menu-section,
+  .contact-section,
+  .info-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Show two info cards side by side on wider screens */
+  .info-section {
+    flex-direction: row;
+  }
+
+  .info-card {
+    flex: 1;
+  }
+
+  .menu-img {
+    max-height: none;   /* full image on large screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    min-height: 100vh;
+  }
+}

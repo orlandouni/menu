@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ REPLACE: Update with your restaurant name -->
+  <title>La Mesa — Weekly Menu</title>
+
+  <!-- Fonts: Playfair Display (headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════════════════════════
+         HEADER — Logo + Restaurant Name
+    ═══════════════════════════════════════ -->
+    <header class="site-header">
+
+      <!-- ✏️ REPLACE: Swap logo.png with your own logo file.
+           If you don't have a logo, delete the <img> tag
+           and only keep the restaurant name. -->
+      <div class="logo-wrap">
+        <img
+          src="logo.png"
+          alt="Restaurant logo"
+          class="logo-img"
+          onerror="this.style.display='none'"
+        />
+      </div>
+
+      <!-- ✏️ REPLACE: Your restaurant name -->
+      <h1 class="restaurant-name">La Mesa</h1>
+
+      <!-- ✏️ REPLACE: A short tagline (optional — delete the <p> if you don't want one) -->
+      <p class="tagline">Fresh flavors, every week</p>
+
+    </header>
+
+    <!-- ═══════════════════════════════════════
+         WEEKLY MENU IMAGE
+         → Just replace menu.jpg each week. Done.
+    ═══════════════════════════════════════ -->
+    <main class="menu-section">
+      <div class="section-label">
+        <span class="pill">This Week's Menu</span>
+      </div>
+
+      <div class="menu-card">
+        <!-- ✏️ KEEP the filename as "menu.jpg" and just overwrite the file each week. -->
+        <img
+          src="menu.jpg"
+          alt="Weekly menu"
+          class="menu-img"
+        />
+      </div>
+    </main>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT / WHATSAPP BUTTON
+    ═══════════════════════════════════════ -->
+    <section class="contact-section">
+
+      <!-- ✏️ REPLACE: Change the phone number in the href below.
+           Format: https://wa.me/COUNTRYCODE_PHONENUMBER (no spaces or dashes)
+           Example for Mexico City (+52): https://wa.me/5215512345678 -->
+      <a
+        href="https://wa.me/5216621234567"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-btn"
+      >
+        <!-- WhatsApp icon (SVG, no external dependency) -->
+        <svg class="wa-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.51L4 29l7.697-1.808A12.93 12.93 0 0 0 16 28c6.627 0 12-5.373 12-12S22.627 3 16 3Z" fill="#fff" fill-opacity=".15"/>
+          <path d="M16 4.5C10.201 4.5 5.5 9.201 5.5 15c0 2.237.693 4.313 1.876 6.025L5.5 27l6.15-1.86A11.45 11.45 0 0 0 16 25.5c5.799 0 10.5-4.701 10.5-10.5S21.799 4.5 16 4.5Z" fill="white" fill-opacity=".9"/>
+          <path d="M21.54 18.1c-.294-.147-1.738-.857-2.007-.955-.27-.098-.466-.147-.663.147-.196.294-.76.955-.932 1.152-.171.196-.343.22-.637.073-.294-.147-1.24-.457-2.362-1.457-.873-.778-1.463-1.739-1.634-2.033-.171-.294-.018-.453.129-.599.131-.131.294-.343.44-.514.147-.171.196-.294.294-.49.098-.196.049-.368-.025-.514-.073-.147-.662-1.596-.907-2.186-.239-.574-.481-.496-.663-.505l-.565-.01c-.196 0-.514.073-.784.368-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.054 2.846 1.2 3.042.147.196 2.073 3.165 5.022 4.437.702.303 1.25.484 1.677.62.705.224 1.346.193 1.853.117.565-.085 1.738-.71 1.984-1.396.245-.687.245-1.274.171-1.396-.073-.122-.27-.196-.564-.343Z" fill="#25D366"/>
+        </svg>
+        Order on WhatsApp
+      </a>
+
+      <!-- ✏️ REPLACE: Your phone number displayed as text (optional) -->
+      <p class="phone-hint">+52 662 123 4567</p>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         INFO — Address + Hours
+    ═══════════════════════════════════════ -->
+    <section class="info-section">
+
+      <!-- Address -->
+      <div class="info-card">
+        <div class="info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6.686-7-11a7 7 0 1 1 14 0c0 4.314-7 11-7 11Z"/>
+            <circle cx="12" cy="10" r="2.5"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Find us</span>
+          <!-- ✏️ REPLACE: Your full address -->
+          <span class="info-value">Blvd. Rodolfo Elías Calles 123<br>Col. San Benito, Hermosillo, Son.</span>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div class="info-card">
+        <div class="info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+        </div>
+        <div class="info-text">
+          <span class="info-label">Opening hours</span>
+          <!-- ✏️ REPLACE: Your actual hours -->
+          <span class="info-value">Mon – Fri &nbsp; 8:00 am – 10:00 pm<br>Sat – Sun &nbsp; 9:00 am – 11:00 pm</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <!-- ✏️ REPLACE: Your restaurant name in the footer too -->
+      <p>&copy; <span id="year"></span> La Mesa. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="script.js"></script>
+</body>
+</html>
